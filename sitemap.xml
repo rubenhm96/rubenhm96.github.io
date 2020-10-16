@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://rubhermar96.github.io/index.html</loc>
+        <lastmod>2020-10-01T17:34:00+02:00</lastmod>
+        <image:image>
+            <image:loc>https://rubhermar96.github.io/img/tatin-01.jpg</image:loc>
+            <image:title>Comedor Restaurante Tatin</image:tittle>
+            <image:geo_location>Valladolid, España</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://rubhermar96.github.io/img/tatin-02.jpg</image:loc>
+            <image:title>Horno Restaurante Tatin</image:tittle>
+            <image:geo_location>Valladolid, España</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://rubhermar96.github.io/img/tatin-03.jpg</image:loc>
+            <image:title>Terraza Restaurante Tatin</image:tittle>
+            <image:geo_location>Valladolid, España</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://rubhermar96.github.io/img/tatin-04.jpg</image:loc>
+            <image:title>Comedor Restaurante Tatin</image:tittle>
+            <image:geo_location>Valladolid, España</image:geo_location>
+        </image:image>
+    </url>
+</urlset>
