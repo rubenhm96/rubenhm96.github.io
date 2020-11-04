@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .forma{
+            width: 250px;
+            height: 150px;
+            text-align: center;
+        }
+        .c1{
+            background-color: rgb(20, 20, 20);
+            color: whitesmoke;
+        }
+        .c2{
+            background-color: rgb(88, 88, 88);
+        }
+        .c3{
+            background-color: rgb(182, 182, 182);
+        }
+        .c4{
+            background-color: rgba(0, 194, 253, 0.986);
+        }
+        .c5{
+            background-color: rgba(0, 194, 253, 0.575);
+        }
+        .c6{
+            background-color: rgba(0, 194, 253, 0.178);
+        }
+        .img{
+            background-image: url(/img_tree.png);
+            background-position: top;
+            background-attachment: fixed; /*Para que la imagen esté fija y se mueva al subir y bajar*/
+        }
+        .redondeado{
+            border: 2px solid rgb(20, 20, 20);
+            border-radius: 20px;
+            background-color: rgba(0, 194, 253, 0.178);
+        }
+        .boton{
+            height: 30px;
+            width: 60px;
+            border: solid black 2px;
+            border-radius: 30px;
+            background-color: rgb(182, 182, 182);
+            margin: 0px auto;
+            margin-top: 40%;
+            text-align: center;
+        }
+        .boton:hover{
+            background-color: rgba(255, 117, 237, 0.986);
+        }
+    </style>
+</head>
+<body>
+    <!--Colores Solidos-->
+    <h1>Colores</h1>
+    <div class="forma c1">
+        rgb(20, 20, 20)
+    </div>
+    <div class="forma c2">
+        rgb(88, 88, 88)
+    </div>
+    <div class="forma c3">
+        rgb(182, 182, 182)
+    </div>
+    <!--Colores con transparencia-->
+    <h1>Colores con transparencia</h1>
+    <div class="forma c4">
+        rgba(0, 194, 253, 0.986)
+    </div>
+    <div class="forma c5">
+        rgba(0, 194, 253, 0.575)
+    </div>
+    <div class="forma c6">
+        rgba(0, 194, 253, 0.178)
+    </div>
+    <!--Imagen de fondo-->
+    <h1>Capa con imagen de fondo</h1>
+    <div class="forma img">
+        Imagen de fondo
+    </div>
+    <!--Bordes con redondeados y boton-->
+    <h1>Capa con bordes redondeados</h1>
+    <div class="forma redondeado">
+        <div class="boton">
+            Boton
+        </div>
+    </div>
+</body>
+</html>

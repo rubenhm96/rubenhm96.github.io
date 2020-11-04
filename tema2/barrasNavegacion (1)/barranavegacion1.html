@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra navegacion 1 con search</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body{
+            margin: auto;
+        }
+        nav{
+            width: 100%;
+            height: 52px;
+            background-color: rgb(70, 70, 70);
+        }
+        nav ul {
+            list-style: none;
+            margin:auto 0px;
+            padding-left: unset;
+        }
+        nav li {
+            display: inline;
+            float: left;
+        }
+        li a{
+            text-align: center;
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            align-items: center;
+            border-right: whitesmoke solid 1px;
+            
+        }
+        .active{
+            background-color: rgb(0, 153, 255);
+        }
+        li a:hover{
+            background-color: rgb(0, 153, 255);
+        }
+      
+        nav form{
+            float: right;
+            padding: 8px;
+        }
+        form button{
+            height: 24px;
+            width: 35px;
+            background-color: rgb(0, 153, 255);
+            border: solid black 1px;
+            border-radius: 12px;
+        }
+        form button:hover{
+            background-color:deeppink;
+        }
+        input{
+            height: 22px;
+            border: solid black 1px;
+            border-radius: 12px;
+        }
+        .icons{
+            color: whitesmoke;
+            height: 16px;
+            width: 16px;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .pagination{
+            display: inline-block;
+            background-color: rgb(0, 153, 255);
+            border: rgb(70, 70, 70) solid 1px;
+            border-radius: 14px;
+            padding:8px;
+            margin-top: 20px;
+        }
+        .pagination a{
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: whitesmoke;
+            padding: 8px;
+            font-size: 20px;
+        }
+        .pagination a:hover{
+            background-color: whitesmoke;
+            border: solid rgb(70, 70, 70) 1px;
+            border-radius: 10px;
+            color: rgb(70, 70, 70);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href=""class="active"><i class="material-icons icons">home</i>Home</a></li>
+            <li><a href=""><i class="material-icons icons">info</i>About</a></li>
+            <li><a href=""><i class="material-icons icons">mail_outline</i>Contact</a></li>
+        </ul>
+        <form action="">
+            <input type="text" placeholder=" Search..." name="search">
+            <button type="submit">
+                <i class="material-icons icons">search</i>
+            </button>
+        </form>
+    </nav>
+    <div class="pagination">
+        <a href="">&laquo;</a>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">&raquo;</a>
+    </div>
+</body>
+</html>
