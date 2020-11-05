@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Desplegable</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .desplegable{
+            position: relative;
+            top: 70px;
+            left: 10%;
+            width: 100px;
+        }
+        .desplegable button{
+            width: 100%;
+            background-color: rgb(80, 80, 80);
+            border: unset;
+            height: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: whitesmoke;
+        }
+        .menu{
+            position: absolute;
+            width: 100%;
+            display: none;
+            box-shadow: 4px 4px 5px rgba(35, 145, 255, 0.397);
+        }
+        .menu a{
+            display: block;
+            width: 100%;
+            background-color: rgb(187, 187, 187);
+            height: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 10px;
+        }
+        .desplegable:hover .menu{
+            display: block;
+        }
+        .menu a:hover{
+            background-color: dodgerblue;
+            font-weight: bold;
+            border-bottom: 2px solid whitesmoke;
+            border-top: 2px solid whitesmoke;
+            padding-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="desplegable">
+        <button disabled="disabled" name="bttnMenu"><i class="material-icons">menu</i></button>
+        <div class="menu">
+            <a href=""><i class="material-icons">accessible_forward</i></a>
+            <a href=""><i class="material-icons">android</i></a>
+            <a href=""><i class="material-icons">flight_takeoff</i></a>
+            <a href=""><i class="material-icons">pan_tool</i></a>
+        </div>
+    </div>
+</body>
+</html>
