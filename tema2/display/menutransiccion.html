@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body{
+            margin: auto;
+        }
+        .btnMenu button{
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            font-size: 40px;
+            border: unset;
+        }
+        .menuDeslizable a{
+            display: block;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="btnMenu"><button onclick="abrirMenu()"><i class="material-icons">menu</i></button></div>
+    <div class="menuDeslizable">
+        <a href="" class="close" onclick="cerrarMenu()"><i class="material-icons"></i></a>
+        <a href=""><i class="material-icons"></i>Tema 1</a>
+        <a href=""><i class="material-icons"></i>Tema 2</a>
+        <a href=""><i class="material-icons"></i>Tema 3</a>
+        <a href=""><i class="material-icons"></i>Tema 4</a>
+    </div>
+</body>
+</html>
