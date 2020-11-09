@@ -94,6 +94,7 @@
     position: relative;
     top: -40px;
     right: 145px;
+    z-index: 2;
 }
 #menu a{
     color: rgb(241, 241, 241);
