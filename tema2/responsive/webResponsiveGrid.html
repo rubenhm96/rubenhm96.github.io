@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <style>
         *{
             box-sizing: border-box;
@@ -28,6 +30,17 @@
             color: whitesmoke;
             position:fixed;
             bottom: 0px;
+            text-align: center;
+        }
+        .btn{
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+        .btnMenu{
+            background-color: rgb(39, 39, 39);
+            border: rgb(3, 157, 247) solid 2px;
+            color: whitesmoke;
         }
         html{
             font-family: Arial, Helvetica, sans-serif;
@@ -52,14 +65,14 @@
             background-color: whitesmoke;
             font-weight: bold;
         }
-        .aside{
+        aside{
             padding: 15px;
             background-color: whitesmoke;
             border: 2px solid rgb(3, 157, 247);
             text-align: center;
             font-size: 16px;
         }
-        section:after{
+        main:after{
             clear: both;
             display: table;
         }
@@ -71,6 +84,14 @@
         [class*="col-"] {
             /*mobile*/
             width: 100%;
+        }
+        @media only screen and (max-width: 600px){
+            /*nav{
+                display: none;
+            }*/
+            .btn{
+                display:block;
+            }
         }
         
         @media only screen and (min-width: 600px) {
@@ -157,8 +178,11 @@
 <body>
     <header>
         <h1>Chania</h1>
+        <div class="btn">
+            <button class="btnMenu"><span class="material-icons" onclick="abrirMenu();">menu</span></button>
+        </div>
     </header>
-    <section>
+    <main>
         <nav class="col-3 col-s-3">
             <ul id="menuList">
                 <li class="menuItem">The Flight</li>
@@ -167,23 +191,29 @@
                 <li class="menuItem">The Food</li>
             </ul>
         </nav>
-        <div class="col-6 col-s-9">
+        <section class="col-6 col-s-9">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-        </div>
+        </section>
         <div class="col-3 col-s-12">
-            <div class="aside">
+            <aside">
                 <h2>What?</h2>
                 <p>Chania is a city on the Island of Crete.</p>
                 <h2>Where?</h2>
                 <p>Crete is a Greek island in the Mediterranean Sea.</p>
                 <h2>How?</h2>
                 <p>You can reach Chania airpot from all over Europe.</p>
-            </div>
+            </aside>
         </div>
-    </section>
+    </main>
     <footer>
         <p>Resize the browser window to see how the content respond to the resizing.</p>
     </footer>
+
+    <script>
+        function abrirMenu(){
+            document.getElementsByTagName("nav").style.display="block";
+        }
+    </script>
 </body>
 </html>
