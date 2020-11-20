@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body{
             margin: 0;
             background-color:rgb(233, 233, 233);
@@ -23,6 +26,8 @@
             padding: 15px;
             width: 100%;
             color: whitesmoke;
+            position:fixed;
+            bottom: 0px;
         }
         html{
             font-family: Arial, Helvetica, sans-serif;
@@ -32,14 +37,120 @@
         }
         #menuList{
             width: 100%;
-            padding: 10px;
+            padding: 5px;
         }
         .menuItem{
             list-style-type: none;
             padding: 10px;
-            margin: 5px;
+            margin-bottom: 5px;
             color: whitesmoke;
             background-color: rgb(3, 157, 247);
+            border: solid 2px rgb(3, 157, 247);
+        }
+        .menuItem:hover{
+            color: rgb(3, 157, 247);
+            background-color: whitesmoke;
+            font-weight: bold;
+        }
+        .aside{
+            padding: 15px;
+            background-color: whitesmoke;
+            border: 2px solid rgb(3, 157, 247);
+            text-align: center;
+            font-size: 16px;
+        }
+        section:after{
+            clear: both;
+            display: table;
+        }
+        [class*="col-"]{
+            float: left;
+            padding: 10px;
+        }
+
+        [class*="col-"] {
+            /*mobile*/
+            width: 100%;
+        }
+        
+        @media only screen and (min-width: 600px) {
+            /* tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+            .col-s-2 {
+                width: 16.66%;
+            }
+            .col-s-3 {
+                width: 25%;
+            }
+            .col-s-4 {
+                width: 33.33%;
+            }
+            .col-s-5 {
+                width: 41.66%;
+            }
+            .col-s-6 {
+                width: 50%;
+            }
+            .col-s-7 {
+                width: 58.33%;
+            }
+            .col-s-8 {
+                width: 66.66%;
+            }
+            .col-s-9 {
+                width: 75%;
+            }
+            .col-s-10 {
+                width: 83.33%;
+            }
+            .col-s-11 {
+                width: 91.66%;
+            }
+            .col-s-12 {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (min-width: 800px) {
+            /* desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+            .col-2 {
+                width: 16.66%;
+            }
+            .col-3 {
+                width: 25%;
+            }
+            .col-4 {
+                width: 33.33%;
+            }
+            .col-5 {
+                width: 41.66%;
+            }
+            .col-6 {
+                width: 50%;
+            }
+            .col-7 {
+                width: 58.33%;
+            }
+            .col-8 {
+                width: 66.66%;
+            }
+            .col-9 {
+                width: 75%;
+            }
+            .col-10 {
+                width: 83.33%;
+            }
+            .col-11 {
+                width: 91.66%;
+            }
+            .col-12 {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -48,7 +159,7 @@
         <h1>Chania</h1>
     </header>
     <section>
-        <nav>
+        <nav class="col-3 col-s-3">
             <ul id="menuList">
                 <li class="menuItem">The Flight</li>
                 <li class="menuItem">The City</li>
@@ -56,11 +167,11 @@
                 <li class="menuItem">The Food</li>
             </ul>
         </nav>
-        <div class="">
+        <div class="col-6 col-s-9">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
         </div>
-        <div class="">
+        <div class="col-3 col-s-12">
             <div class="aside">
                 <h2>What?</h2>
                 <p>Chania is a city on the Island of Crete.</p>
