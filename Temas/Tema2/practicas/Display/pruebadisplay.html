@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            float: left;
+            text-align: center;
+            width: 30%;
+            border: solid 1px black;
+            margin: 7px;
+            padding: 5px;
+            box-shadow: 10px 10px darkgrey;
+        }
+        .container img{
+            width: 100%;
+        }
+        .container span{
+            font-family: monospace;
+            font:bold;
+            font-size: 20px;
+        }
+        #cont1 img:hover{
+            display: none;
+        }
+        #cont2 img:hover{
+            visibility: hidden;
+        }
+        button{
+            width: 100%;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(144, 212, 243);
+        }
+    </style>
+</head>
+<body>
+    <h3>Difference between display:none and visibility:hidden</h3>
+    <p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+    <p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+
+    <div class="container" id="cont1">
+        <span>Caja 1</span>
+        <img src="img/img_5terre.jpg" alt="">
+        <button onclick="removeElement()">Remove</button>
+    </div>
+    <div class="container" id="cont2">
+        <span>Caja 2</span>
+        <img src="img/img_lights.jpg" alt="">
+        <button onclick="changeVisibility()">Hide</button>
+    </div>
+    <div class="container" id="cont3">
+        <span>Caja 3</span>
+        <img src="img/img_forest.jpg" alt="">
+        <button onclick="resetElement()">Reset All</button>
+    </div>
+    <script>
+        function removeElement(){
+            document.getElementById("cont1").style.display="none";
+        }
+        function changeVisibility(){
+            document.getElementById("cont2").style.visibility="hidden";
+        }
+        function resetElement(){
+            document.getElementById("cont1").style.display="block";
+            document.getElementById("cont2").style.visibility="visible";
+        }
+    </script>
+
+</body>
+</html>

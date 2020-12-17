@@ -27,14 +27,43 @@
             height: 10px;
             width: 100%;
         }
+        .temas{
+            height: 265px;
+            width: 47%;
+            margin-top: 1%;
+            display: flex;
+            align-items: center;
+        }
+        #documentacion{
+            background-color: gold;
+        }
+        #urls{
+            background-color: rgb(192, 192, 192);
+        }
+        #practicas{
+            background-color: rgb(2, 238, 255);
+        }
+        #Tema4{
+            background-color: rgb(192, 192, 192);
+        }
+        #Tema5{
+            background-color: gold;
+        }
+        #aside{
+            background-image: url(../img/vscode.png);
+            height: 850px;
+            width: 47%;
+            float: right;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
         #footer{
             height: 150px;
             width: 100%;
             background-color: rgb(26, 26, 26);
             margin-top: 1%;
             display: flex;
-            align-items: center;
-            
+            align-items: flex-end;
         }
         h1{
             color: azure;
@@ -43,7 +72,7 @@
         }
         h2{
             margin: auto;
-            font-size: 50px;
+            font-size: 70px;
             float: left;
             margin-left: 2%;
         }
@@ -64,23 +93,12 @@
             float: right;
             margin-right: 1%;
         }
-        #pdf{
-            height: 870px;
-            width: 100%;
-            text-align: center;
-            margin-top: 1%;
-        }
-        iframe{
-            height: 860px;
-            width: 50%;
-            margin-top: 1%;
-            margin: auto;
-        }
+
     </style>
 </head>
 <body>
     <div id="Header">
-        <h1>WhatsApp Balsamiq</h1>
+        <h1>Practicas</h1>
     </div>
     <div id="head1">
 
@@ -88,7 +106,19 @@
     <div id="head2">
 
     </div>
-    <div id="pdf"><iframe src="whatsapp.pdf" frameborder="0"></iframe></div>
+    <div id="aside"></div>
+    <div class="temas" id="documentacion">
+        <h2>Barras Navegación</h2>
+        <a href="barrasNavegacion/barrasNavegacion.html" class="abrir"><img src="../img/abrir.png" alt="" height="80"></a>
+    </div>
+    <div class="temas" id="urls">
+        <h2>Display</h2>
+        <a href="Display/display.html" class="abrir"><img src="../img/abrir.png" alt="" height="80"></a>
+    </div>
+    <div class="temas" id="practicas">
+        <h2>Responsive</h2>
+        <a href="Responsive/responsive.html" class="abrir"><img src="../img/abrir.png" alt="" height="80"></a>
+    </div>
     <div id="footer">
         <h3 id="nombre">Rubén Herrera Marcos</h3>
         <h3 id="curso">2º DAW</h3>

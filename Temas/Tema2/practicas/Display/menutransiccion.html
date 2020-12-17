@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body{
+            margin: auto;
+        }
+        .btnMenu button{
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            font-size: 40px;
+            border: unset;
+        }
+        .menuDeslizable{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.808);
+            overflow: hidden;
+            transition: 3s;
+
+        }
+        .menuDeslizable a{
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 3s;
+        }
+        .menuDeslizable:hover a{
+            color: beige;
+        }
+        .menuDeslizable a:hover{
+            background-color: rgba(245, 245, 220, 0.808);
+            color: black;
+        }
+        .menuDeslizable .close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .menu_opciones{
+            position: relative;
+            top: 40px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btnMenu"><button onclick="abrirMenu()"><i class="material-icons">menu</i></button></div>
+    <div class="menuDeslizable">
+        <a href="" class="close" onclick="cerrarMenu()"><i class="material-icons">close</i></a>
+        <div class="menu_opciones">
+            <a href=""><i class="material-icons"></i>Tema 1</a>
+            <a href=""><i class="material-icons"></i>Tema 2</a>
+            <a href=""><i class="material-icons"></i>Tema 3</a>
+            <a href=""><i class="material-icons"></i>Tema 4</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function abrirMenu(){
+            document.getElementsByClassName("menuDeslizable").style.width="0px";
+        }
+        function cerrarMenu(){
+            document.getElementsByClassName("menuDeslizable").style.width="0px";
+        }
+    </script>
+</body>
+</html>

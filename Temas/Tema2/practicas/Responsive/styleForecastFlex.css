@@ -1,0 +1,231 @@
+/*Body*/
+*{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    /*border: 1px solid #999;*/
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #666;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+/*div weather-forecast*/
+@media (max-width:600px){
+    .weather-forecast{
+        width: 100%;
+    }
+}
+.weather-forecast{
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.location{
+    font-size:  3em;
+    color: #444;
+}
+/*current*/
+.current{
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.visual{
+    width: 50%;
+    flex: 50%;
+}
+.visual .icon{
+    width: 64px;
+    height: 64px;
+}
+.icon.cloudy{
+    background-image: url(https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fcloudy.png?v=1588942708821); 
+}
+.icon{
+    background-repeat: no-repeat;
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+}
+.temp{
+    font-size: 2.5em;
+    display: inline-flex;
+    flex-direction: row;
+    vertical-align: top;
+}
+.scale{
+    vertical-align: top;
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 6px;
+    color: #888;
+}
+/*current description*/
+.current .description{
+    width: 50%;
+    flex: 50%;
+}
+.current .description{
+    width: 50%;
+    float: left;
+}
+.precip::before{
+    content: "Precipitation: ";
+    color: #888;
+}
+.humidity::before{
+    content: "Humidity: ";
+    color: #888;
+}
+.wind::before{
+    content: "Wind: ";
+    color: #888;
+}
+.pollen::before{
+    content: "Pollen Count: ";
+    color: #888;
+}
+/*seven-day*/
+.seven-day div{
+    vertical-align: middle;
+}
+@media (max-width: 600px){
+    .seven-day-fc{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+.seven-day-fc{
+    margin: 0 -11px -1px -11px;
+    padding: 10px;
+}
+/*date*/
+@media (max-width:600px){
+    .seven-day-fc .date{
+        width: 30%;
+    }
+}
+.seven-day-fc .date{
+    font-weight: bold;
+    color: #444;
+}
+.seven-day-fc div{
+    display: inline-flex;
+    flex-direction: row;
+}
+.seven-day div{
+    vertical-align: middle;
+}
+/*icon thunder*/
+.seven-day-fc .icon{
+    width: 50px;
+    height: 50px;
+}
+.icon.thunder{
+    background-image: url(https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fthunderstorms.png?v=1588942705076);
+}
+.icon.sunny {
+    background-image: url(https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fsunny.png?v=1588942701577);
+}
+.icon.pc {
+    background-image: url(https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fpartly_cloudy.png?v=1588942697934);
+}
+.icon.sshowers {
+    background-image: url(https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Frain_s_cloudy.png?v=1588942692675);
+}
+@media (max-width: 600px){
+    .seven-day-fc .seven-day-temp{
+        width: 30%;
+    }
+}
+@media (min-width: 500px){
+    .seven-day-fc .seven-day-temp {
+        margin-left: 8%;
+    }
+}
+.seven-day-fc .seven-day-temp{
+    text-align: center;
+    margin-left: 8%;
+}
+.seven-day-fc .temp-high, .seven-day-fc .temp-low{
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+.seven-day-fc .temp-high{
+    color: #444;
+}
+.seven-day-fc .temp-low{
+    color: #888;
+}
+.seven-day-fc .pcount{
+    text-align: center;
+}
+.pcount::before{
+    content: "Pollen ";
+    color: #888;
+}
+@media (max-width:500px){
+.seven-day-fc .pcount{
+    flex-direction: column;
+}
+.seven-day-fc .seven-day-temp{
+    flex-direction: column;
+}   
+}
+@media (min-width: 500px){
+.seven-day-fc .icon {
+    width: 64px;
+    height: 64px;
+}
+}
+@media (min-width: 360px){
+    body {
+        font-size: 1.0em;
+    }
+}
+/* min width 600px */
+@media (min-width: 601px){
+    .weather-forecast {
+        width: 100%;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+@media (min-width: 601px){
+    .seven-day-fc {
+        display: inline-flex;
+        flex-direction: column;
+        width: 13.5%;
+        margin: 0;
+        border: none;
+        font-size: 0.8em;
+    }
+}
+@media (min-width: 500px){
+    .seven-day-fc .seven-day-temp {
+        margin-left: 5%;
+    }
+}
+@media (min-width: 601px){
+    .seven-day-fc .seven-day-temp {
+        font-size: 1.25em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 601px){
+    .seven-day-fc div {
+        display: inline-flex;
+        flex-direction: row;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

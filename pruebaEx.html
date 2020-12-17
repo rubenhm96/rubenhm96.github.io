@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            width: 100%;
+            background-color: turquoise;
+            display: block;
+            padding: 20px;
+        }
+        header div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .logo{
+            flex: 30%;
+            align-items: initial;
+        }
+        .title{
+            flex: 60%;
+        }
+        img{
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+        nav{
+            width: 100%;
+            background-color: rgb(43, 43, 43);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+        .menu-grande{
+            display: none;
+            padding: 5px;
+            width: 80%;
+        }
+        .menu-grande a{
+            padding: 10px;
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            font-size: 30px;
+        }
+        .menu-grande a:hover{
+            background-color: lightblue;
+        }
+        .menu-pequenio{
+            background-color: white;
+            text-align: left;
+            display: none;
+            position: relative;
+            top: -35px;
+            box-shadow: 5px 5px 5px 5px white;
+        }
+        .menu-pequenio a{
+            display: block;
+            padding: 10px;
+            background-color: blanchedalmond;
+            border-bottom: 1px black solid;
+            color: black;
+            font-size: 30px;
+        }
+        .menu-pequenio i{
+            margin-right: 5px;
+        }
+        .menu-pequenio a:hover{
+            background-color: white;
+        }
+        nav button{
+            background-color: whitesmoke;
+            color: black;
+            border: black 2px solid;
+            border-radius: 5px;
+        }
+        .btnMenu:hover .menu-pequenio{
+            display: block;
+        }
+
+
+        footer{
+            width: 100%;
+            background-color: black;
+            height: 100px;
+        }
+        aside{
+            display: none;
+        }
+        .imgGaleria{
+            margin: 20px;
+            overflow: hidden;
+            width: 80%;
+            border-radius: 60%;
+
+        }
+        .btnFixed{
+            position: fixed;
+            bottom: 15%;
+            right: 5%;
+        }
+        .btnFixed button{
+            width: 80px;
+            height: 80px;
+            border: 2px solid red;
+            border-radius: 40px;
+            background-color: lightseagreen;
+            box-shadow: 0px 0px 5px 5px red;
+        }
+        .btnFixed button:hover{
+            background-color: white;
+            border: 2px solid lightseagreen;
+            box-shadow: 0px 0px 5px 5px lightseagreen;
+        }
+        @media (min-width: 900px){
+            header div{
+                flex-direction: row;
+                font-size: 25px;
+            }
+            .logo{
+                width: 140px;
+                margin-right: 4%;
+            }
+            .imgGaleria{
+                width: 44%;
+                display: inline-block;
+            }
+            .btnMenu{
+                display: none;
+            }
+            .menu-grande{
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="img/vscode.png" alt=""></div>
+        <div class="title"><h1>Prueba Examen Display</h1></div>
+    </header>
+    <nav>
+        <div class="btnMenu">
+        <button disabled><i class="material-icons">menu</i></button>
+        <div class="menu-pequenio">
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+        </div>
+        </div>
+        <div class="menu-grande">
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+            <a href=""><i class="material-icons">insert_chart</i>Link 1</a>
+        </div>
+    </nav>
+    <aside> ho</aside>
+    <section>
+        <div class="imgGaleria">
+            <img src="img/vscode.png" alt="">
+        </div>
+        <div class="imgGaleria">
+            <img src="img/vscode.png" alt="">
+        </div>
+        <div class="imgGaleria">
+            <img src="img/vscode.png" alt="">
+        </div>
+        <div class="imgGaleria">
+            <img src="img/vscode.png" alt="">
+        </div>
+        <div class="btnFixed"><button><i class="material-icons">accessible</i></button></div>
+    </section>
+    <footer>
+        Holi
+    </footer>
+</body>
+</html>
