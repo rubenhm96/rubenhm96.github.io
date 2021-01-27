@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            max-width: 100%;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video controls poster="../practicaCello/img/cello1-525.jpg">
+        <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.webm" type="video/webm">
+        <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4" type="video/mp4">
+        <track src="subtitulos.vtt" label="English captions" kind="captions" srclang="en" default/>
+        <p>Your browser cannot play the provided video file.</p>
+    </video>
+    <div class="video-container">
+        <iframe src="//www.youtube.com/embed/l-BA9Ee2XuM"
+                frameborder="0" width="560" height="315">
+        </iframe>
+    </div>
+</body>
+</html>
