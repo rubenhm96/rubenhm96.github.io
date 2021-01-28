@@ -1,0 +1,117 @@
+//Declaracion Variables
+$fuentePrimaria: Arial, Helvetica, sans-serif;
+$fontSizeTitulo: 32px;
+$fontSizeTitulo2:26px;
+$fontSizeMenu: 18px;
+$fontSizeTexto: 14px;
+
+$color1: rgb(29,29,29);
+$color2: rgb(2,147,253);
+$color3: rgb(195,195,195);
+$color4: rgb(39,39,39);
+$color5: whitesmoke;
+$colorFuenteB:$color5;
+$colorFuenteN: $color1;
+
+$width100: 100%;
+$width50: 50%;
+$width33:33%;
+$width0:0%;
+
+//BODY
+body{
+    font-family: $fuentePrimaria;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $color3;
+}
+img{
+    max-width: $width100;
+}
+//HEADER
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $color1;
+    width: $width100;
+    padding: 15px;
+}
+.logo-header{
+    width: 85px;
+    height: 85px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+header h1{
+    font-size: $fontSizeTitulo;
+    color: $colorFuenteB;
+    margin: 0px;
+}
+//MENU DESPLEGABLE
+nav{
+    background-color: $color2;
+    color: $colorFuenteB;
+    width: $width100;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menuMovil button{
+    background-color: $color2;
+    border: 2px solid $color5;
+    border-radius: 5px;
+    color: $colorFuenteB;
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+.menuMovil button:hover{
+    background-color: $color4;
+}
+.menu-desplegable{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: $color2;
+    padding: 10px;
+    width: $width0;
+    height: $width100;
+    text-align: left;
+    z-index: 66;
+}
+.menu-desplegable button{
+    padding: 5px;
+    font-size: $fontSizeMenu;
+    margin-bottom: 10px;
+}
+.menu-desplegable a{
+    padding: 10px;
+    text-decoration: none;
+    color: $color5;
+    font-size: $fontSizeMenu;
+    width: $width100;
+    border-bottom: 2px solid $color5;
+    transition: background-color 1s, color 1s;
+}
+.menu-desplegable a:hover{
+    background-color: $color5;
+    color: $color2;
+}
+//MAIN
+main{
+    width: $width100;
+    display: flex;
+    flex-direction: column;
+}
+article{
+    width: $width100;
+    flex-direction: column;
+    padding: 10px;
+    color: $colorFuenteN;
+}

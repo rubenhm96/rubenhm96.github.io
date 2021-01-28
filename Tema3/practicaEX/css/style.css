@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #c3c3c3;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1d1d1d;
+  width: 100%;
+  padding: 15px;
+}
+
+.logo-header {
+  width: 85px;
+  height: 85px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: whitesmoke;
+  margin: 0px;
+}
+
+nav {
+  background-color: #0293fd;
+  color: whitesmoke;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuMovil button {
+  background-color: #0293fd;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  color: whitesmoke;
+  padding-left: 35px;
+  padding-right: 35px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.menuMovil button:hover {
+  background-color: #272727;
+}
+
+.menu-desplegable {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #0293fd;
+  padding: 10px;
+  width: 0%;
+  height: 100%;
+  text-align: left;
+  z-index: 66;
+}
+
+.menu-desplegable button {
+  padding: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.menu-desplegable a {
+  padding: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+  width: 100%;
+  border-bottom: 2px solid whitesmoke;
+  transition: background-color 1s, color 1s;
+}
+
+.menu-desplegable a:hover {
+  background-color: whitesmoke;
+  color: #0293fd;
+}
+
+/*# sourceMappingURL=style.css.map */
