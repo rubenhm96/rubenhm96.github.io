@@ -16,13 +16,17 @@ $colorFuenteN: $color1;
 $width100: 100%;
 $width50: 50%;
 $width33:33%;
+$width25:25%;
 $width0:0%;
 
+
 //BODY
-body{
+*{
     font-family: $fuentePrimaria;
     margin: 0;
     box-sizing: border-box;
+}
+body{
     background-color: $color3;
 }
 img{
@@ -72,6 +76,24 @@ nav{
 .menuMovil button:hover{
     background-color: $color4;
 }
+.menuPC{
+    display: flex;
+    flex-direction: row;
+    width: $width100;
+    text-align: center;
+}
+.menuPC a{
+    padding: 10px;
+    text-decoration: none;
+    color: $color5;
+    font-size: $fontSizeMenu;
+    width: $width25;
+    transition: background-color 1s, color 1s;
+}
+.menuPC a:hover{
+    background-color: $color5;
+    color: $color2;
+}
 .menu-desplegable{
     display: none;
     flex-direction: column;
@@ -114,4 +136,60 @@ article{
     flex-direction: column;
     padding: 10px;
     color: $colorFuenteN;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.cont-video{
+    width: $width100;
+    background-color: $color4;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.cont-video video{
+    max-width: $width100;
+}
+.img-main{
+    max-width: $width100;
+}
+.img-main img{
+    box-shadow: 0px 0px 5px 5px $color1;
+}
+.txt-main{
+    padding: 5px;
+    margin: 10px;
+    max-width: $width100;
+    font-size: $fontSizeTexto;
+    border: 2px solid $color1;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 2px $color1;
+}
+footer{
+    padding: 30px;
+    background-color: $color1;
+    color: $colorFuenteB;
+    font-size: $fontSizeTitulo2;
+    text-align: center;
+}
+
+@media (min-width:800px){
+    article{
+        display:flex;
+        flex-direction: row;
+    }
+    article div{
+        max-width: $width33;
+    }
+}
+@media(min-width:501px){
+    .menuMovil button{
+        display: none;
+    }
+}
+@media(max-width:500px){
+    header{
+        flex-direction: column;
+    }
+    .menuPC{
+        display: none;
+    }
 }

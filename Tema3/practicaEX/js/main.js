@@ -3,7 +3,7 @@ function startJS(){
         //Abrir Menu Desplegable
         $("#openMenu").click(function(){
           $(".menu-desplegable").css("display","flex");
-          $(".menu-desplegable").animate({width:"90%"},1000);
+          $(".menu-desplegable").animate({width:"100%"},1000);
           $("#openMenu").css("visibility","hidden");
         });
         //Cerrar Menu Desplegable
