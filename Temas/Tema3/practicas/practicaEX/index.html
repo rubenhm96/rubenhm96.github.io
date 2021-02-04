@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <a href="index.html"><div class="logo-header"><img src="img/logo-header.png" alt=""></div></a>
+        <h1>NOMBRE.COM</h1>
+    </header>
+    <!--nav-->
+    <nav>
+        <div class="menuPC">
+            <a href="">LINK 1</a>
+            <a href="">LINK 2</a>
+            <a href="">LINK 3</a>
+            <a href="">LINK 4</a>
+            <a href="">LINK 5</a>
+        </div>
+        <!--Menu Desplegable-->
+        <div class="menuMovil">
+            <button class="material-icons" id="openMenu">menu</button>
+            <div class="menu-desplegable" id="menuDesp">
+                <button id="closeMenu">Cerrar</button>
+                <a href="">LINK 1</a>
+                <a href="">LINK 2</a>
+                <a href="">LINK 3</a>
+                <a href="">LINK 4</a>
+                <a href="">LINK 5</a>
+            </div>
+        </div>
+    </nav>
+    <!--main-->
+    <main>
+        <article>
+            <figure class="img-main" tabindex="0">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/tigre1-1920.jpg"/>
+                    <source media="(min-width: 500px)" srcset="img/tigre1-975.jpg"/>
+                    <img src="img/tigre1-525.jpg" alt="Tigraso acechando a su presa">
+                </picture>
+            </figure>
+            <div class="txt-main" tabindex="0"><p>El tigre (Panthera tigris) es una de las especies3​ de la subfamilia de los panterinos (familia Felidae) pertenecientes al género Panthera. Se encuentra solamente en el continente asiático; es un predador carnívoro y es la especie de félido más grande del mundo junto con el león pudiendo alcanzar ambos un tamaño comparable al de los fósiles de félidos de mayor tamaño.</p></div>
+            <figure class="img-main" tabindex="0">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/tigre2-1920.jpg"/>
+                    <source media="(min-width: 500px)" srcset="img/tigre2-975.jpg"/>
+                    <img src="img/tigre2-525.jpg" alt="Tigraso rujiendo">
+                </picture>
+            </figure>
+        </article>
+        <div class="cont-video">
+            <video controls poster="img/tigre-img-video.jpg">
+                <source src="img/video-tigre.webm" type="video/webm">
+                <source src="img/video-tigre.mp4" type="video/mp4">
+                <track src="subtitulos.vtt" label="Spanish captions" kind="captions" srclang="es" default/>
+            </video>
+        </div>
+        <article>
+            <figure class="img-main" tabindex="0">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/tigre1-1920.jpg"/>
+                    <source media="(min-width: 500px)" srcset="img/tigre1-975.jpg"/>
+                    <img src="img/tigre1-525.jpg" alt="Tigraso acechando a su presa">
+                </picture>
+            </figure>
+            <div class="txt-main"><p>El tigre (Panthera tigris) es una de las especies3​ de la subfamilia de los panterinos (familia Felidae) pertenecientes al género Panthera. Se encuentra solamente en el continente asiático; es un predador carnívoro y es la especie de félido más grande del mundo junto con el león pudiendo alcanzar ambos un tamaño comparable al de los fósiles de félidos de mayor tamaño.</p></div>
+            <figure class="img-main" tabindex="0">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/tigre2-1920.jpg"/>
+                    <source media="(min-width: 500px)" srcset="img/tigre2-975.jpg"/>
+                    <img src="img/tigre2-525.jpg" alt="Tigraso rujiendo">
+                </picture>
+            </figure>
+        </article>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Footer Web</p>
+    </footer>
+</body>
+</html>
