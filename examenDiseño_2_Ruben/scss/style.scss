@@ -1,0 +1,124 @@
+//Variables
+
+//Colores
+$colorPrimario: rgb(30, 53, 33);
+$colorSecundario: rgb(81, 245, 122);
+$color3: rgb(39, 39, 39);
+$colorAlternativo: rgb(247,247,247);
+
+//widths
+$width100:100%;
+$width75:75%;
+$width50:50%;
+$width33:33%;
+$width25:25%;
+$width0:0%;
+//padding
+$paddingNormal:10px;
+$paddingGrande:20px;
+
+//fuentes
+$fuentePrimaria: Arial, Helvetica, sans-serif;
+$FuenteH1: Arial, Helvetica, sans-serif;
+$FuenteH2: 'Brush Script MT', cursive;
+$fontSizeH1: 70px;
+$fontSizeH2:50px;
+$fontSizeMenu: 20px;
+$fontSizeTexto: 19px;
+$colorH1:$colorAlternativo;
+$colorH2:$colorSecundario;
+
+//bordes
+$boderRight: 2px solid $colorAlternativo;
+
+//aplicacion de variables
+//Body
+*{
+    font-family: $fuentePrimaria;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body{
+    background-color: $colorSecundario;
+}
+//Header
+header{
+    width: $width100;
+    padding: $paddingGrande;
+    background-color: $colorPrimario;
+    color: $colorAlternativo;
+    //titulo encabezado
+    h1{
+        font-size: $fontSizeH1;
+    }
+}
+//nav
+.menuPC{
+    width: $width100;
+    padding: $paddingNormal;
+    background-color: $colorAlternativo;
+    display: flex;
+    flex-direction: row;
+    //enlaces del menu
+    a{
+        background-color: $colorPrimario;
+        color: $colorAlternativo;
+        padding: $paddingNormal;
+        font-size: $fontSizeMenu;
+        font-weight: bold;
+        text-decoration: none;
+        border-right: $boderRight;
+    }
+    a:hover{
+        background-color: $colorSecundario;
+        color: $colorPrimario;
+    }
+}
+//Main
+main{
+    display: flex;
+    flex-direction: row;
+    width: $width100;
+    padding: $paddingNormal;
+    //contenedores de los videos
+    article{
+        max-width: $width33;
+        padding: $paddingNormal;
+        video{
+            max-width: $width100;
+            border: 5px solid $colorPrimario;
+            border-radius: 5px;
+        }
+    }
+}
+//footer
+footer{
+    position: fixed;
+    bottom: 0;
+    width: $width100;
+    text-align: center;
+    padding: $paddingGrande;
+    background-color: $colorPrimario;
+    h2{
+        font-size: $FuenteH2;
+        color: $colorAlternativo;
+    }
+}
+//media querys
+@media (max-width:600px){
+    header{
+        h1{
+            font-size: 40px;
+        }
+    }
+    main{
+        flex-direction: column;
+        article{
+            max-width: $width100;
+        }
+    }
+    footer{
+        position: relative;
+    }
+}

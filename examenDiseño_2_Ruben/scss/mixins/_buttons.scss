@@ -27,7 +27,6 @@
     @include gradient-bg($hover-background);
     border-color: $hover-border;
   }
-
   .btn-check:focus + &,
   &:focus {
     color: $hover-color;

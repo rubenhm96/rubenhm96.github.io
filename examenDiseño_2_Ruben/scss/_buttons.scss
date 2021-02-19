@@ -7,7 +7,7 @@
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
-  color: $body-color;
+  color: $green-900;
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
@@ -60,11 +60,20 @@
     @include button-variant($value, $value);
   }
 }
+.btn-primary{
+  background-color: $green-900;
+  border-color: $green-900;
+}
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
   }
+}
+.btn-secondary{
+  background-color: $gray-400;
+  border-color: $gray-400;
+  color: $dark;
 }
 
 
