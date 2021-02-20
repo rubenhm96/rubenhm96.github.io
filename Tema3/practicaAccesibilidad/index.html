@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Practica</title>
+    <title>Inicio Practica Accesibilidad</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <header role="banner">
-        <h1>PRACTICA ACCESIBILIDAD</h1>
-        <h2>Diseño Web</h2>
+        <h1 tabindex="0">PRACTICA ACCESIBILIDAD</h1>
+        <h2 tabindex="0">Diseño Interfaces Web</h2>
     </header>
     <nav role="navigation">
-        <div class="menuPC">
+        <div class="menuPC" role="navigation">
             <a href="index.html">Inicio</a>
-            <a href="">Focus</a>
-            <a href="">Semántica</a>
-            <a href="">Aria</a>
-            <a href="">Comprobar Accesibilidad</a>
+            <a href="focus.html">Focus</a>
+            <a href="semantica.html">Semántica</a>
+            <a href="aria.html">Aria</a>
+            <a href="test.html">Testear Accesibilidad</a>
+        </div>
+        <div class="menuMovil">
+            <button class="material-icons" id="openMenu" role="button">menu</button>
+            <div class="menu-desplegable" id="menuDesp" role="navigation">
+                <button id="closeMenu" class="material-icons" role="button">close</button>
+                <a href="index.html">Inicio</a>
+                <a href="focus.html">Focus</a>
+                <a href="semantica.html">Semántica</a>
+                <a href="aria.html">Aria</a>
+                <a href="test.html">Testear Accesibilidad</a>
+            </div>
         </div>
     </nav>
+    <main role="main">
+        <article role="article">
+            <section role="text">
+                <h1 tabindex="0" role="doc-subtitle">¿Qué Es la Accesibilidad?</h1>
+                <p tabindex="0" role="text">La accesibilidad dentro del entorno de las aplicaciones Web, es la capacidad que tiene un contenido Web en ser funcional en cualquier tipo de dispositivo y estar disponible para cualquiera en cualquier situación. Por lo tanto, una Web accesible no es únicamente para personas con discapacidad.</p>
+            </section>
+        </article>
+        <aside role="complementary">
+            <figure tabindex="0" class="img-aside" role="img">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/banner-1000.png">
+                    <source media="(min-width: 500px)" srcset="img/banner-700.png">
+                    <img src="img/banner-450.png" alt="Imagen que representa la importancia de la accesibilidad en el desarrollo web">
+                </picture>
+            </figure>
+        </aside>
+    </main>
 </body>
 </html>

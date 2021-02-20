@@ -24,7 +24,7 @@ header {
 
 header h1 {
   padding: 10px;
-  font-family: "Brush Script MT", cursive;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: #008cff;
   font-size: 60px;
@@ -50,12 +50,11 @@ nav {
   align-items: center;
 }
 
-nav .menuPC {
+.menuPC {
   padding: 10px;
   display: flex;
   flex-direction: row;
   width: 100%;
-  text-align: center;
 }
 
 .menuPC a {
@@ -69,6 +68,118 @@ nav .menuPC {
 
 .menuPC a:hover {
   background-color: #001f38;
+}
+
+.menuMovil button {
+  background-color: #008cff;
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  color: #f7f7f7;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 1s, color 1s;
+}
+
+.menuMovil button:hover {
+  background-color: #f7f7f7;
+  color: #1d1d1d;
+}
+
+.menu-desplegable {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #001f38;
+  padding: 10px;
+  width: 0%;
+  height: 100%;
+  text-align: left;
+  z-index: 96;
+}
+
+.menu-desplegable a {
+  padding: 10px;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-size: 20px;
+  width: 100%;
+  border-bottom: 2px solid #f7f7f7;
+  transition: background-color 1s, color 1s;
+}
+
+.menu-desplegable a:hover {
+  background-color: #dedede;
+  color: #001f38;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+main article {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+main article h1 {
+  font-size: 50px;
+  border-bottom: 2px solid #004278;
+}
+main article p {
+  font-size: 19px;
+  padding: 20px;
+}
+main aside {
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+@media (min-width: 800px) {
+  article {
+    display: flex;
+    flex-direction: row;
+  }
+
+  article div {
+    max-width: 33%;
+  }
+}
+@media (min-width: 501px) {
+  .menuMovil button {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 40px;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main article {
+    width: 100%;
+  }
+  main article h1 {
+    font-size: 30px;
+  }
+  main aside {
+    display: none;
+  }
+
+  .menuPC {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
