@@ -157,9 +157,29 @@ main{
             font-size: $fontSizeH2;
             border-bottom: 2px solid $colorSecundario-medio;
         }
+        h2{
+            border-bottom: 2px solid $colorSecundario-medio;
+        }
+        li{
+            font-size: $fontSizeTexto;
+            padding: $paddingNormal;
+        }
         p{
             font-size: $fontSizeTexto;
             padding: $paddingGrande;
+        }
+        .ejemplos{
+            flex-direction: row;
+            width: $width100;
+            margin-left: 20px;
+            button{
+                background-color: $colorSecundario;
+                border: 2px solid $colorAlternativo;
+                border-radius: 5px;
+                color: $colorAlternativo;
+                padding: 5px;
+                cursor: pointer;
+            }
         }
     }
     aside{
@@ -169,15 +189,19 @@ main{
         width: $width25;
     }
 }
-
+//FOOTER
+footer{
+    padding: 30px;
+    background-color: $colorPrimario-medio;
+    color: $colorAlternativo;
+    font-size: 20px;
+    text-align: center;
+}
 
 @media (min-width:800px){
     article{
         display:flex;
         flex-direction: row;
-    }
-    article div{
-        max-width: $width33;
     }
 }
 @media(min-width:501px){

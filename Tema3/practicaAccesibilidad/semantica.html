@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantica - Practica Accesibilidad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <!--HEADER-->
+    <header role="banner">
+        <h1 tabindex="0">PRACTICA ACCESIBILIDAD</h1>
+        <h2 tabindex="0">Diseño Interfaces Web</h2>
+    </header>
+    <!--NAV-->
+    <nav role="navigation">
+        <!--NAV PC-->
+        <div class="menuPC" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="focus.html">Focus</a>
+            <a href="semantica.html">Semántica</a>
+            <a href="aria.html">Aria</a>
+            <a href="test.html">Testear Accesibilidad</a>
+        </div>
+        <!--NAV MOVIL-->
+        <div class="menuMovil">
+            <button class="material-icons" id="openMenu" role="button">menu</button>
+            <div class="menu-desplegable" id="menuDesp" role="navigation">
+                <button id="closeMenu" class="material-icons" role="button">close</button>
+                <a href="index.html">Inicio</a>
+                <a href="focus.html">Focus</a>
+                <a href="semantica.html">Semántica</a>
+                <a href="aria.html">Aria</a>
+                <a href="test.html">Testear Accesibilidad</a>
+            </div>
+        </div>
+    </nav>
+    <!--MAIN-->
+    <main role="main">
+        <!--ARTICLE-->
+        <article role="article">
+            <!--SECTION 1-->
+            <section role="doc-introduction">
+                <h1 tabindex="0" role="doc-subtitle">Semántica</h1>
+                <p tabindex="0" role="doc-part">La accesibilidad dentro del entorno de las aplicaciones Web, es la capacidad que tiene un contenido Web en ser funcional en cualquier tipo de dispositivo y estar disponible para cualquiera en cualquier situación. Por lo tanto, la accesibilidad se refiere a la experiencia de los usuarios que pueden estar fuera del usuario "típico", que puede acceder o interactuar con la web de una manera distinta. Normalmente, involucra a los usuarios que experimentan algún tipo de discapacidad, teniendo en cuenta que esta puede ser no física ni temporal.</p>    
+            </section>
+            <!--SECTION 2-->
+            <section role="doc-part">
+                <h2 tabindex="0" role="doc-subtitle">Pautas Accesiblidad en Contenido Web</h2>
+                <p tabindex="0" role="doc-part">Las WCAG (Web Content Accessibility Guidelines), son un conjunto de pautas y buenas prácticas reunidas por expertos en accesibilidad para abordar lo que significa "accesibilidad" de una manera metódica</p>
+                <p tabindex="0" role="doc-part">Se organiza en torno a cuatro principios llamos POUR:</p>
+                <ul role="list">
+                    <li tabindex="0">Perceptible: Que todo tipo de usuario puedan percibir el contenido correctamente.</li>
+                    <li tabindex="0">Operable: Que todo tipo de usuario pueda utlizar la interfaz y navegar por el contenido.</li>
+                    <li tabindex="0">Comprensible: Que el contenido sea entendible y lo suficientemente consistente como para evitar confusiones.</li>
+                    <li tabindex="0">Robusto: Que el contenido se pueda reproducir en diferentes navegadores, etc.</li>
+                </ul>
+            </section>
+            <!--Enlace Siguiente-->
+            <section role="doc-part">
+                <p><a href="focus.html" role="link">Seguir con el siguiente contenido de la guía - Aria</a></p>
+            </section>
+        </article>
+        <!--ASIDE-->
+        <aside role="complementary">
+            <!--IMAGEN-->
+            <figure tabindex="0" class="img-aside" role="img">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/banner-1000.png">
+                    <source media="(min-width: 500px)" srcset="img/banner-700.png">
+                    <img src="img/banner-450.png" alt="Imagen del banner sobre accesibilidad, no tiene un significado especial.">
+                </picture>
+            </figure>
+        </aside>
+    </main>
+    <footer>
+        <h1>Rubén Herrera Marcos 2ºDAW</h1>
+    </footer>
+</body>
+</html>
