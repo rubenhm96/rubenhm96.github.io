@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testear Accesibilidad - Practica Accesibilidad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <!--HEADER-->
+    <header role="banner">
+        <h1 tabindex="0">PRACTICA ACCESIBILIDAD</h1>
+        <h2 tabindex="0">Diseño Interfaces Web</h2>
+    </header>
+    <!--NAV-->
+    <nav role="navigation">
+        <!--NAV PC-->
+        <div class="menuPC" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="focus.html">Focus</a>
+            <a href="semantica.html">Semántica</a>
+            <a href="aria.html">Aria</a>
+            <a href="test.html">Testear Accesibilidad</a>
+        </div>
+        <!--NAV MOVIL-->
+        <div class="menuMovil">
+            <button class="material-icons" id="openMenu" role="button">menu</button>
+            <div class="menu-desplegable" id="menuDesp" role="navigation">
+                <button id="closeMenu" class="material-icons" role="button">close</button>
+                <a href="index.html">Inicio</a>
+                <a href="focus.html">Focus</a>
+                <a href="semantica.html">Semántica</a>
+                <a href="aria.html">Aria</a>
+                <a href="test.html">Testear Accesibilidad</a>
+            </div>
+        </div>
+    </nav>
+    <!--MAIN-->
+    <main role="main">
+        <!--ARTICLE-->
+        <article role="article">
+            <!--SECTION 1-->
+            <section role="doc-introduction">
+                <h1 tabindex="0" role="doc-subtitle">Testear Accesibilidad</h1>
+                <p tabindex="0" role="doc-part">Para llevar a cabo el testeo de la accesibilidad de una página Web se pueden realizar las siguientes prácticas:</p>
+                <ul role="list">
+                    <li tabindex="0">Hacer un testeo de la navegación con teclado de la Web. Para tener una buena experiencia, intentar tener un orden de tabulación lógico.</li>
+                    <li tabindex="0">Comprobar que el contenido que está fuera de la pantalla no recibe el foco.</li>
+                    <li tabindex="0">Comprobar si la web es Responsive, para que la página Web se puede usar en todo tipo de dispositivos.</li>
+                    <li tabindex="0">Probar un lector de pantalla. Comprobar el funcionamiento de lectores de Pantalla como (NVDA o la extensión Screen Reader del navegador Chrome), percatándose de que accedan al contenido que queremos que sea leído.</li>
+                    <li tabindex="0">Comprobar si los enlaces y botones indican lo que hacen y su estado.</li>
+                    <li tabindex="0">Usar herramientas de testeo automáticas como la extensión de chrome "WAVE evaluation tool", que nos indica si la estructura, contraste, etc de la Web son correctos:</li>
+                    <figure tabindex="0" role="img">
+                        <picture>
+                            <img src="img/testWAVE-800.png" alt="Resultados del testeo de la extensión de accesibilidad WAVE, en la que indica que no hay errores">
+                        </picture>
+                    </figure>
+                    <li tabindex="0">En el caso de usar otro navegador se puede usar la herramienta de testeo Lighthouse, en la que podemos testear tanto la accesibilidad como el performance de la web:</li>
+                    <figure tabindex="0" role="img">
+                        <picture>
+                            <img src="img/testLighthouse.png" alt="Resultados del testeo de la herramienta Lighthouse, con resultado de 100 puntos tanto en accesibilidad como en buenas prácticas">
+                        </picture>
+                    </figure>
+                </ul>    
+            </section>
+        </article>
+        <!--ASIDE-->
+        <aside role="complementary">
+            <!--IMAGEN-->
+            <figure class="img-aside" role="img">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/banner-1000.png">
+                    <source media="(min-width: 500px)" srcset="img/banner-700.png">
+                    <img src="img/banner-450.png" alt="Imagen del banner sobre accesibilidad, no tiene un significado especial.">
+                </picture>
+            </figure>
+        </aside>
+    </main>
+    <footer>
+        <h1>Rubén Herrera Marcos 2ºDAW</h1>
+    </footer>
+</body>
+</html>

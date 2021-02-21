@@ -153,6 +153,7 @@ main{
         display: flex;
         flex-direction: column;
         padding: $paddingGrande;
+        border-right: 2px solid $colorAlternativo-medio;
         h1{
             font-size: $fontSizeH2;
             border-bottom: 2px solid $colorSecundario-medio;
@@ -167,6 +168,9 @@ main{
         p{
             font-size: $fontSizeTexto;
             padding: $paddingGrande;
+        }
+        figure{
+            text-align: center;
         }
         .ejemplos{
             flex-direction: row;

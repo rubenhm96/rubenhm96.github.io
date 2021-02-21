@@ -124,6 +124,7 @@ main article {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  border-right: 2px solid #dedede;
 }
 main article h1 {
   font-size: 50px;
@@ -139,6 +140,9 @@ main article li {
 main article p {
   font-size: 19px;
   padding: 20px;
+}
+main article figure {
+  text-align: center;
 }
 main article .ejemplos {
   flex-direction: row;
