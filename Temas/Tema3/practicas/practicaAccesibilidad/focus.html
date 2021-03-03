@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus - Practica Accesibilidad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <!--HEADER-->
+    <header role="banner">
+        <h1 tabindex="0">PRACTICA ACCESIBILIDAD</h1>
+        <h2 tabindex="0">Diseño Interfaces Web</h2>
+    </header>
+    <!--NAV-->
+    <nav role="navigation">
+        <!--NAV PC-->
+        <div class="menuPC" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="focus.html">Focus</a>
+            <a href="semantica.html">Semántica</a>
+            <a href="aria.html">Aria</a>
+            <a href="test.html">Testear Accesibilidad</a>
+        </div>
+        <!--NAV MOVIL-->
+        <div class="menuMovil">
+            <button class="material-icons" id="openMenu" role="button">menu</button>
+            <div class="menu-desplegable" id="menuDesp" role="navigation">
+                <button id="closeMenu" class="material-icons" role="button">close</button>
+                <a href="index.html">Inicio</a>
+                <a href="focus.html">Focus</a>
+                <a href="semantica.html">Semántica</a>
+                <a href="aria.html">Aria</a>
+                <a href="test.html">Testear Accesibilidad</a>
+            </div>
+        </div>
+    </nav>
+    <!--MAIN-->
+    <main role="main">
+        <!--ARTICLE-->
+        <article role="article">
+            <!--SECTION 1-->
+            <section role="doc-introduction">
+                <h1 tabindex="0" role="doc-subtitle">Focus</h1>
+                <p tabindex="0" role="doc-part">El enfoque determina dónde van los eventos del teclado en la web en un momento dado. Algunos usuarios usan el Ordenador casi en su totalidad con el teclado. Para estos usuarios, el enfoue es fundamental, ya que es su principal medio de llegar a todo lo que aparece en la pantalla. Por esto, todas las funciones de la página deben estar disponibles usando el teclado.</p>    
+            </section>
+            <!--SECTION 2-->
+            <section role="doc-part">
+                <h2 tabindex="0" role="doc-subtitle">¿Qué es "Focusable"?</h2>
+                <p tabindex="0" role="doc-part">Dentro de los elementos HTML, los hay que se pueden enfocar implícitamente, como campos de texto, botones o listas de selección, lo que significa que se insertan automáticamente en el orden de tabulación y tienen control de eventos de teclado sin la intervención del desarrollador.</p>
+                <p tabindex="0" role="doc-part">Pero no todos los elementos son enfocables. Los párrafos, divs y otros, no se enfocan a medida que se avanza por la página Web. En general, no es necesario enfocar algo si el usuario no puede interactuar con él.</p>
+            </section>
+            <!--SECTION 3-->
+            <section role="doc-part">
+                <h2 tabindex="0" role="doc-subtitle">El Orden del DOM Importa</h2>
+                <p tabindex="0" role="doc-part">Trabajando con elementos nativos aprenderemos sobre el comporamiento del foco ya que se insertan automáticamente en el orden de tabulación según su posición en el DOM.</p>
+                <p tabindex="0" role="doc-part">Como Ejemplo, teniendo tres botones, presionando la tecla Tab, enfocariamos a cada botón en orden:</p>
+                <div class="ejemplos" role="doc-part">
+                    <button>Ejemplo Botón 1</button>
+                    <button>Ejemplo Botón 2</button>
+                    <button>Ejemplo Botón Último</button>
+                </div>
+                <p tabindex="0" role="doc-part">Pero hay que tener en cuenta que usando CSS, podemos cambiar el orden en el que un elemento aparece en pantalla sin que este se refleje en el DOM. Por ejemplo, con "float", se puede mover un botón hacia la derecha pero su orden de tabulación sería siendo el mismo.</p>
+                <div class="ejemplos" role="doc-part">
+                    <button style="float:right">Botón 1 con float right</button>
+                    <button>Ejemplo Botón 2</button>
+                    <button>Ejemplo Botón Último</button>
+                </div>
+            </section>
+            <!--SECTION 4-->
+            <section>
+                <h2 tabindex="0" role="doc-subtitle">Contenido Fuera de Pantalla</h2>
+                <p tabindex="0" role="doc-part">En ocasiones, insertamos en la página Web elementos que no aparecen en la pantalla (como menús desplegables, etc). Para que estos elementos no se lleven el Foco, deberemos configurarlos mediante CSS con "display:none" o "visibility:hidden", y luego volver a configurarlo para mostrarlo al usuario.</p>
+            </section>
+            <!--SECTION 5-->
+            <section>
+                <h2 tabindex="0" role="doc-subtitle">Tabindex</h2>
+                <p tabindex="0" role="doc-part">Con tabindex, se puede especificar un orden explícito para los elementos de la página enfocables, insertar un elemento que de otro modo no se podría enfocar y eliminar elementos del orden de tabulación. Por Ejemplo:</p>
+                <ul role="list">
+                    <li tabindex="0">tabindex="0": Inserta un elemento en el orden de tabulación. Por ejemplo este elemento de la lista coge el focus del DOM gracias a este atributo.</li>
+                    <li tabindex="0">tabindex="-1": Elimina un elemento del orden de tabulación. Como por ejemplo los siguientes botones:</li>
+                    <div class="ejemplos" role="doc-part">
+                        <button tabindex="-1">Boton eliminado del focus</button>
+                        <button>Botón 2. El primero se le ha eliminado el foco</button>
+                    </div>
+                    <li tabindex="0">tabindex="5": Cualquier tabindex mayor que 0 hace que ese elemento salte al principio del orden de tabulación.</li>
+                    <div class="ejemplos" role="doc-part">
+                        <button>Boton 1</button>
+                        <button>Botón 2</button>
+                        <button tabindex="5">Botón 3. Soy el primero por tabindex:"5"</button>
+                    </div>
+                </ul>
+            </section>
+            <!--Enlace siguiente-->
+            <section role="doc-part">
+                <p><a href="semantica.html" role="link">Seguir con el siguiente contenido de la guía - Semántica</a></p>
+            </section>
+        </article>
+        <!--ASIDE-->
+        <aside role="complementary">
+            <!--IMAGEN-->
+            <figure class="img-aside" role="img">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/banner-1000.png">
+                    <source media="(min-width: 500px)" srcset="img/banner-700.png">
+                    <img src="img/banner-450.png" alt="Imagen del banner sobre accesibilidad, no tiene un significado especial.">
+                </picture>
+            </figure>
+        </aside>
+    </main>
+    <footer>
+        <h1>Rubén Herrera Marcos 2ºDAW</h1>
+    </footer>
+</body>
+</html>

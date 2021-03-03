@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantica - Practica Accesibilidad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <!--HEADER-->
+    <header role="banner">
+        <h1 tabindex="0">PRACTICA ACCESIBILIDAD</h1>
+        <h2 tabindex="0">Diseño Interfaces Web</h2>
+    </header>
+    <!--NAV-->
+    <nav role="navigation">
+        <!--NAV PC-->
+        <div class="menuPC" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="focus.html">Focus</a>
+            <a href="semantica.html">Semántica</a>
+            <a href="aria.html">Aria</a>
+            <a href="test.html">Testear Accesibilidad</a>
+        </div>
+        <!--NAV MOVIL-->
+        <div class="menuMovil">
+            <button class="material-icons" id="openMenu" role="button">menu</button>
+            <div class="menu-desplegable" id="menuDesp" role="navigation">
+                <button id="closeMenu" class="material-icons" role="button">close</button>
+                <a href="index.html">Inicio</a>
+                <a href="focus.html">Focus</a>
+                <a href="semantica.html">Semántica</a>
+                <a href="aria.html">Aria</a>
+                <a href="test.html">Testear Accesibilidad</a>
+            </div>
+        </div>
+    </nav>
+    <!--MAIN-->
+    <main role="main">
+        <!--ARTICLE-->
+        <article role="article">
+            <!--SECTION 1-->
+            <section role="doc-introduction">
+                <h1 tabindex="0" role="doc-subtitle">Semántica</h1>
+                <p tabindex="0" role="doc-part">La Tecnología asistencial es un término para definir a los diferentes dispositivos, software y herramientas que ayudan a una persona con discapacidad a completar una tarea. Esto puede incluir algo tan básico como el zoom del navegador, o también lectores de pantalla, pantallas braille, etc. Muchas de estas tecnoogías se basan en la semántica expresada mediante programación para crear una experiencia de usuario accesible.</p>
+            </section>
+            <!--SECTION 2-->
+            <section role="doc-part">
+                <h2 tabindex="0" role="doc-subtitle">Lectores de Pantalla</h2>
+                <p tabindex="0" role="doc-part">Una de las tecnólogías de asistencia más populares son los lectores de pantalla, un programa que permite a las personas con discapacidad visual utilizar los sistemas informáticos leyendo el texto en voz alta con una voz generada por el programa.</p>
+                <p tabindex="0" role="doc-part"> Un buen lector de pantalla debe contar toda la información sobre los elementos que encuentra:</p>
+                <ul role="list">
+                    <li tabindex="0">El rol o tipo del elemento.</li>
+                    <li tabindex="0">El nombre del elemento si lo tiene.</li>
+                    <li tabindex="0">El valor del elemento si lo tiene.</li>
+                    <li tabindex="0">El estado del elemento, por ejemplo, si está habilitado o deshabilitado.</li>
+                </ul>
+                <h2 tabindex="0" role="doc-subtitle">El Árbol de la Accesibilidad</h2>
+                <p tabindex="0" role="doc-part">El árbol de accesibilidad es con lo que interactúan la mayoría de las tecnologías de asistencia. El flujo es algo así:</p>
+                <ul role="list">
+                    <li tabindex="0">Una aplicación (navegador, por ejemplo) expone una versión semántica de su interfaz de usuario a la tecnología de asistencia a través de su API.</li>
+                    <li tabindex="0">La tecnología recoge la información a través de la API y crea una interfaz alternativa para el usuario.</li>
+                    <li tabindex="0">La tecnología de asistencia también puede permitir al usuario interactuar con la aplicación.</li>
+                    <li tabindex="0">La tecnología debe interpretar las acciones del usuario en el contexto de la interfaz de usuairo original.</li>
+                </ul>
+                <h2 tabindex="0">Semánticas de HTML nativo</h2>
+                <p>Un navegador puede transformar el árbol DOM en un árbol de accesibilidad porque gran parte del DOM tiene un significado semántico implícito. Es decir, usa elementos HTML nativos que son reconocidos por los navegadores y funcionan de manera predecible en distintas plataformas. Uno de los errores que se pueden cometer es el de crear elementos que parecen nativos pero que realmente no lo son, como el de usar un elemento "div" para hacer un botón.</p>
+                <h2 tabindex="0">Alternativas de Texto para Imágenes</h2>
+                <p tabindex="0">Las imágenes son un componente muy importante dentro de las páginas Web, por lo que deberemos de usar el atributo "alt" para darle un significado a las imágenes para ayudar a que sean comprendidas por usuarios con poca visión.</p>
+                <p tabindex="0">La siguiente imagen tiene un atributo "alt" que define a la imagen, de este modo el lector de pantalla no nos leera el nombre de la imagen y nos dará más información sobre ella:</p>
+                <figure tabindex="0" role="img">
+                    <picture>
+                        <img src="img/treestructure.jpg" alt="Imagen que explica el árbol del DOM.">
+                    </picture>
+                </figure>
+                <h2 tabindex="0">Otras Opciones de Navegación</h2>
+                <ul role="list">
+                    <li tabindex="0">Usar los encabezados de manera efectiva.</li>
+                    <li tabindex="0">No implementar botones usando enlaces, ya que el lector de pantalla interpreta que el contenido se trata de un enlace y perderá funcionalidad.</li>
+                    <li tabindex="0">Utilizar imágenes como contenido de los enlaces añadiendo el atributo "alt".</li>
+                    <li tabindex="0">Usar (HTML5) los elementos header, footer, nav... para definir la estructura semántica de la página.</li>
+                </ul>
+            </section>
+            <!--Enlace Siguiente-->
+            <section role="doc-part">
+                <p><a href="aria.html" role="link">Seguir con el siguiente contenido de la guía - Aria</a></p>
+            </section>
+        </article>
+        <!--ASIDE-->
+        <aside role="complementary">
+            <!--IMAGEN-->
+            <figure class="img-aside" role="img">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="img/banner-1000.png">
+                    <source media="(min-width: 500px)" srcset="img/banner-700.png">
+                    <img src="img/banner-450.png" alt="Imagen del banner sobre accesibilidad, no tiene un significado especial.">
+                </picture>
+            </figure>
+        </aside>
+    </main>
+    <footer>
+        <h1>Rubén Herrera Marcos 2ºDAW</h1>
+    </footer>
+</body>
+</html>

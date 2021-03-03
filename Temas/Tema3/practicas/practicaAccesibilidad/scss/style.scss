@@ -1,0 +1,241 @@
+//Variables
+
+//Colores
+$colorPrimario: rgb(29,29,29);
+$colorPrimario-medio:rgb(39,39,39);
+$colorPrimario-claro: rgb(120,120,120);
+
+$colorSecundario: rgb(0, 140, 255);
+$colorSecundario-medio: rgb(0,66,120);
+$colorSecundario-oscuro: rgb(0,31,56);
+
+$colorAlternativo: rgb(247,247,247);
+$colorAlternativo-medio: rgb(222,222,222);
+
+//widths
+$width100:100%;
+$width75:75%;
+$width50:50%;
+$width33:33%;
+$width25:25%;
+$width0:0%;
+//padding
+$paddingNormal:10px;
+$paddingGrande:20px;
+
+//fuentes
+$fuentePrimaria: Arial, Helvetica, sans-serif;
+$FuenteH1: Arial, Helvetica, sans-serif;
+$FuenteH2: 'Brush Script MT', cursive;
+$fontSizeH1: 60px;
+$fontSizeH2:50px;
+$fontSizeMenu: 20px;
+$fontSizeTexto: 19px;
+$colorH1:$colorAlternativo;
+$colorH2:$colorSecundario;
+
+//bordes
+$boderRight: 2px solid $colorAlternativo;
+
+//Body
+*{
+    font-family: $fuentePrimaria;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $colorAlternativo;
+}
+img{
+    max-width: $width100;
+}
+//Header
+header{
+    display: flex;
+    flex-direction: column;
+    width: $width100;
+    align-items: center;
+    justify-content: center;
+    padding: $paddingGrande;
+    background-color: $colorPrimario-medio;
+}
+header h1{
+    padding: $paddingNormal;
+    font-family: $FuenteH1;
+    text-align: center;
+    color: $colorSecundario;
+    font-size: $fontSizeH1;
+    border-bottom: 1px solid $colorAlternativo;
+}
+header h2{
+    padding: $paddingNormal;
+    font-family: $FuenteH2;
+    color: $colorAlternativo;
+    font-size: $fontSizeH2;
+    text-align: center;
+}
+//navegador
+nav{
+    background-color: $colorSecundario-medio;
+    color: $colorAlternativo;
+    width: $width100;
+    padding: $paddingNormal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+//MENUPC
+.menuPC{
+    padding: $paddingNormal;
+    display: flex;
+    flex-direction: row;
+    width: $width100;
+}
+.menuPC a{
+    text-decoration: none;
+    color: $colorAlternativo;
+    padding: $paddingNormal;
+    font-size: $fontSizeMenu;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
+.menuPC a:hover{
+    background-color: $colorSecundario-oscuro;
+}
+//MENUMOVIL
+.menuMovil button{
+    background-color: $colorSecundario;
+    border: 2px solid $colorAlternativo;
+    border-radius: 5px;
+    color: $colorAlternativo;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 1s, color 1s;
+}
+.menuMovil button:hover{
+    background-color: $colorAlternativo;
+    color: $colorPrimario;
+}
+.menu-desplegable{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: $colorSecundario-oscuro;
+    padding: $paddingNormal;
+    width: $width0;
+    height: $width100;
+    text-align: left;
+    z-index: 96;
+}
+.menu-desplegable a{
+    padding: $paddingNormal;
+    text-decoration: none;
+    color: $colorAlternativo;
+    font-size: $fontSizeMenu;
+    width: $width100;
+    border-bottom: 2px solid $colorAlternativo;
+    transition: background-color 1s, color 1s;
+}
+.menu-desplegable a:hover{
+    background-color: $colorAlternativo-medio;
+    color: $colorSecundario-oscuro;
+}
+//MAIN
+main{
+    display: flex;
+    flex-direction: row;
+    width: $width100;
+    article{
+        width: $width75;
+        display: flex;
+        flex-direction: column;
+        padding: $paddingGrande;
+        border-right: 2px solid $colorAlternativo-medio;
+        h1{
+            font-size: $fontSizeH2;
+            border-bottom: 2px solid $colorSecundario-medio;
+        }
+        h2{
+            border-bottom: 2px solid $colorSecundario-medio;
+        }
+        li{
+            font-size: $fontSizeTexto;
+            padding: $paddingNormal;
+        }
+        p{
+            font-size: $fontSizeTexto;
+            padding: $paddingGrande;
+        }
+        figure{
+            text-align: center;
+        }
+        .ejemplos{
+            flex-direction: row;
+            width: $width100;
+            margin-left: 20px;
+            button{
+                background-color: $colorSecundario-oscuro;
+                border: 2px solid $colorSecundario;
+                border-radius: 5px;
+                color: $colorAlternativo;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    aside{
+        margin-top: 5%;
+        justify-content: center;
+        align-items: center;
+        width: $width25;
+    }
+}
+//FOOTER
+footer{
+    padding: 30px;
+    background-color: $colorPrimario-medio;
+    color: $colorAlternativo;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (min-width:800px){
+    article{
+        display:flex;
+        flex-direction: row;
+    }
+}
+@media(min-width:501px){
+    .menuMovil button{
+        display: none;
+    }
+}
+@media(max-width:500px){
+    header{
+        h1{
+            font-size: 40px;
+        }
+        h2{
+            font-size: 30px;
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        article{
+            width: $width100;
+            h1{
+                font-size: 30px;
+            }
+        }
+        aside{
+            display: none;
+        }
+    }
+    .menuPC{
+        display: none;
+    }
+}
